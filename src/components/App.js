@@ -10,16 +10,35 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return(
    <div>
-    <BrowserRouter>
+    <NavBar/>
+    
     <Switch>
-    <Route path="/"><Home/></Route>
-      <Route path="/movies"><Movies/></Route>
-      <Route path="/directors" ><Directors/></Route>
-      <Route path="/actors"><Actors/></Route>
-      <Route path="/NavBar"><NavBar/></Route>
-      <NavBar/>
+      {/* <Route exact path="/Movies"> */}
+
+      <Route exact path="/movies">
+          <Movies />
+        </Route>
+        
+        <Route exact path="/Actors">
+          <Actors />
+        </Route>
+
+        <Route exact path="/directors">
+          <Directors />
+        </Route>
+
+        <Route exact path="/actors">
+          <Actors />
+        </Route>
+
+        <Route exact path="/">
+          <Home />
+        </Route>
+
+      
+
       </Switch>
-      </BrowserRouter>
+    
 
   </div>
   )
